@@ -84,7 +84,7 @@ resource "aws_instance" "ansible_worker_nodes" {
 
   }
   tags = {
-    Name = element(var.aws_instance_tags, count.index)
+    Name = var.aws_instance_tags[count.index]
   }
 }
 
